@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import './index.css'
 import {
   createBrowserRouter,
@@ -15,8 +16,10 @@ const router = createBrowserRouter([
   {
     path:'/',
     element:<Root></Root>,
+    
     children:[
       {
+        index: true,
         path:'/home',
         element:<Home></Home>,
         loader: () => fetch('/public/data.json')
