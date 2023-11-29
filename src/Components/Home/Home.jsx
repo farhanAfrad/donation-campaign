@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ItemCard from '../ItemCard/ItemCard';
 // import banner from '../../../public/images/banner.png'
+// import banner from '../../assets/images/banner.png'
 
 const Home = () => {
     const donationItems = useLoaderData();
@@ -31,15 +32,15 @@ const Home = () => {
     
     return (
         <div>
-            <div className="hero h-[600px]" style={{ backgroundImage: 'url(../../../public/images/banner.png)' }}>
+            <div className="hero h-[600px]" style={{ backgroundImage: 'url(/images/banner.png)' }}>
                 <div className="hero-overlay bg-[#fffffff2]"></div>
                 <div className="hero-content text-center flex-col">
                     <h2 className='text-5xl font-bold mb-10'>I Grow By Helping People In Need</h2>
                     <div className="max-w-md">
                         <form onSubmit={handleSubmit}>
                             <div>
-                                <input className='border border-r-0 border-[#DEDEDE] p-4 w-[300px] rounded-s-lg' type="text" name="search" id="" placeholder='search here...' />
-                                <button className='bg-[#FF444A] text-white py-4 px-7 rounded-e-lg'>Search</button>
+                                <input className='border md:border-r-0 border-[#DEDEDE] p-2 md:p-4 w-[300px] md:rounded-s-lg' type="text" name="search" id="" placeholder='search here...' />
+                                <button className='bg-[#FF444A] text-white p-2 md:py-4 md:px-7 md:rounded-e-lg'>Search</button>
                             </div>
 
                         </form>
@@ -48,7 +49,7 @@ const Home = () => {
             </div>
 
 
-            <div className='grid grid-cols-4 gap-6 mt-24'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24'>
                 {
                     // donationItems.filter(item => item.category === searchValue).map(item => <ItemCard key={item.id} item={item}></ItemCard>)
                      flag ? results.map(item => <ItemCard key={item.id} item={item}></ItemCard>) : donationItems.map(item => <ItemCard key={item.id} item={item}></ItemCard>)  

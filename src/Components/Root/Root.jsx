@@ -16,7 +16,7 @@ const Root = () => {
     // // };
     // redkt();
     return (
-        <div className="max-w-7xl mx-auto mb-44">
+        <div className="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto mb-44">
             <NavBar></NavBar>           
             <Outlet></Outlet>
         </div>
