@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ItemCard from '../ItemCard/ItemCard';
-// import banner from '../../../public/images/banner.png'
-// import banner from '../../assets/images/banner.png'
+
 
 const Home = () => {
     const donationItems = useLoaderData();
@@ -12,7 +11,7 @@ const Home = () => {
     const [flag, setFlag] = useState(false);
     
     
-    // const [searchedCategoryItems, setSearchedCategoryItems] = useState([]);
+    
     console.log(donationItems);
     const handleSubmit = e =>{
         e.preventDefault();
